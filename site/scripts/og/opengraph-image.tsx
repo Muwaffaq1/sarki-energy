@@ -1,3 +1,6 @@
+// Source for src/app/opengraph-image.png. Cloudflare Workers can't render it at request time (no filesystem),
+// so the PNG is committed instead. To change it: copy this file back to src/app/opengraph-image.tsx, run
+// `pnpm dev`, save http://localhost:3000/opengraph-image over the PNG, then move this file back here.
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
@@ -8,6 +11,8 @@ import { hero } from "@/content/home";
 export const alt = "Sarki Energy: Energy you can plan around.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+// Rendered once at build time: the Workers runtime has no filesystem to read the photo and font from.
+export const dynamic = "force-static";
 
 export default async function OpengraphImage() {
   const [photo, font] = await Promise.all([

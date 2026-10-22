@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { ArrowRight, GasPump, HardHat, SolarPanel, Warehouse } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/Button";
 import { hero } from "@/content/home";
@@ -15,13 +15,22 @@ const SLIDE_ICONS = { "gas-pump": GasPump, "solar-panel": SolarPanel, warehouse:
  * Slides advance every 6s, driven by the progress bar's CSS animation, and crossfade over 480ms.
  * Picking a tab jumps to it and stops the auto-advance. No auto-advance under reduced motion.
  */
+const REDUCED = "(prefers-reduced-motion: reduce)";
+const subscribeReduced = (onChange: () => void) => {
+  const mq = window.matchMedia(REDUCED);
+  mq.addEventListener("change", onChange);
+  return () => mq.removeEventListener("change", onChange);
+};
+
 export function Hero() {
   const [active, setActive] = useState(0);
-  const [autoplay, setAutoplay] = useState(true);
+  const [chosen, setChosen] = useState(false);
   const [paused, setPaused] = useState(false);
+  // Reduced motion turns auto-advance off; so does picking a tab.
+  const reduced = useSyncExternalStore(subscribeReduced, () => window.matchMedia(REDUCED).matches, () => false);
+  const autoplay = !chosen && !reduced;
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) setAutoplay(false);
     const onVisibility = () => setPaused(document.hidden);
     document.addEventListener("visibilitychange", onVisibility);
     return () => document.removeEventListener("visibilitychange", onVisibility);
@@ -30,7 +39,7 @@ export function Hero() {
   const next = () => setActive((i) => (i + 1) % hero.slides.length);
   const choose = (i: number) => {
     setActive(i);
-    setAutoplay(false);
+    setChosen(true);
   };
 
   const current = hero.slides[active];

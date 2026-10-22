@@ -45,3 +45,9 @@ next-env.d.ts
 /quote-uploads/
 /enquiries.json
 /enquiry-uploads/
+
+# Cloudflare build output
+/.open-next/
+/.wrangler/
+/.dev.vars*
+!.env.production

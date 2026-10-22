@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
-import { useForm, type FieldErrors, type UseFormRegister } from "react-hook-form";
+import { useForm, useWatch, type FieldErrors, type UseFormRegister } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowLeft, ArrowRight, Paperclip, WhatsappLogo, X } from "@phosphor-icons/react";
 import { contact } from "@/content/home";
@@ -28,7 +28,7 @@ export function QuoteForm({ initialService, initialDetails = {} }: Props) {
   const {
     register,
     handleSubmit,
-    watch,
+    control,
     getValues,
     setValue,
     formState: { errors, submitCount },
@@ -39,7 +39,7 @@ export function QuoteForm({ initialService, initialDetails = {} }: Props) {
     defaultValues: { service: initialService ?? "", details: initialDetails, replyBy: "WhatsApp", email: "", organisation: "", notes: "" },
   });
 
-  const serviceId = watch("service");
+  const serviceId = useWatch({ control, name: "service" });
   const service = getService(serviceId);
 
   // Switching service starts its questions fresh (the prefilled ones only apply to the first service).
@@ -142,10 +142,12 @@ export function QuoteForm({ initialService, initialDetails = {} }: Props) {
     <form
       noValidate
       className={styles.form}
-      onSubmit={handleSubmit(() => {
-        setStep("review");
-        requestAnimationFrame(scrollTop);
-      })}
+      onSubmit={(e) =>
+        handleSubmit(() => {
+          setStep("review");
+          requestAnimationFrame(scrollTop);
+        })(e)
+      }
     >
       <div ref={topRef} />
       {submitCount > 0 && errorCount > 0 ? (

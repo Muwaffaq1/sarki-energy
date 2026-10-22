@@ -7,6 +7,15 @@ pnpm install
 pnpm dev        # http://localhost:3000 (syncs tokens first)
 ```
 
+## Deploying (Cloudflare Workers)
+
+```bash
+pnpm deploy     # OpenNext build + upload with Wrangler
+pnpm preview    # same build, served locally by the Workers runtime
+```
+
+Live preview: https://sarki-energy-site.yusufmuwaffaq17.workers.dev (worker `sarki-energy-site`). Search engines are kept out until `ALLOW_INDEXING=true` is set on the production deployment. The public address lives in `.env.production`; change it when the site moves to Sarki’s domain. Photos are served unresized (Workers can’t run Next’s image optimizer), so keep new photos at most 1920 px wide.
+
 ## Annotating the build
 
 Under `pnpm dev`, press **Shift+A** (or the Annotate button, bottom right) and click any element to leave a note. Notes pin to the element and are saved in `annotations.json`, so Claude can read them back. The overlay and its API only exist on the dev server.
