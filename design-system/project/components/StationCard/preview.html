@@ -1,0 +1,16 @@
+<!-- @dsCard group="Organisms" height=380 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>StationCard</title></head>
+<body>
+<div id="root" class="se-grid se-grid--wide"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.StationCard, { kind: 'fuel', name: 'Sarki Station, Wuse II', distance: '2.4 km', address: 'Aminu Kano Cres', status: 'open',
+      products: [{ label: 'PMS (petrol)', price: 897 }, { label: 'AGO (diesel)', price: 1180 }, { label: 'LPG', price: 1150, unit: 'kg' }] }),
+    h(S.StationCard, { kind: 'ev', name: 'Sarki EV Hub, Lekki', distance: '6.1 km', address: 'Admiralty Way', status: 'busy',
+      chargers: { available: 1, total: 4, power: '60 kW', price: 250 } })));
+</script>
+</body>
+</html>

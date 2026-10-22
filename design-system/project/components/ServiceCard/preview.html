@@ -1,0 +1,15 @@
+<!-- @dsCard group="Organisms" height=320 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ServiceCard</title></head>
+<body>
+<div id="root" class="se-grid"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.ServiceCard, { icon: 'solar-panel', title: 'Renewable Energy & Power', description: 'Solar PV systems, battery energy storage and clean power for homes and industry.', href: '#' }),
+    h(S.ServiceCard, { icon: 'gas-pump', title: 'Oil & Gas', description: 'Supply and trading, fuel station services, CNG and LPG stations.', href: '#' }),
+    h(S.ServiceCard, { icon: 'hard-hat', title: 'Engineering', description: 'End-to-end EPC services delivering quality, safe and efficient projects.', href: '#' })));
+</script>
+</body>
+</html>

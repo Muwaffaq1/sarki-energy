@@ -1,0 +1,20 @@
+.band { padding-block: var(--space-64); background: var(--surface-inverse); color: var(--ink-inverse); }
+
+.inner { display: flex; flex-direction: column; gap: var(--space-32); }
+
+.copy { display: flex; flex-direction: column; gap: var(--space-12); max-width: 720px; }
+
+.title { font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+.text { color: var(--ink-inverse-muted); }
+
+.actions { display: flex; flex-direction: column; gap: var(--space-12); }
+
+@media (min-width: 768px) {
+  .title { font-size: 48px; line-height: 56px; letter-spacing: -0.03em; }
+  .actions { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .inner { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+  .copy { flex: 1; max-width: none; }
+}

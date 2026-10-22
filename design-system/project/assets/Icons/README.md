@@ -1,0 +1,1 @@
+Phosphor Icons 2.1.1, regular weight, MIT licence. Single-ink SVGs on a 256 grid that draw in `currentColor`; shown here in black. In code use `Sarki.Icon` or `@phosphor-icons/react`. Add new icons from the same set and weight only.

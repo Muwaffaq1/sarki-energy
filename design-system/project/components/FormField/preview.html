@@ -1,0 +1,15 @@
+<!-- @dsCard group="Molecules" height=248 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>FormField</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.FormField, { label: 'Company name', required: true }, h(S.Input, { defaultValue: 'Kano Agro Mills Ltd' })),
+    h(S.FormField, { label: 'Average monthly diesel spend', hint: 'A rough figure is fine. We use it to size your solar system.' }, h(S.Input, { placeholder: '450,000', suffix: '\u20A6 / month', inputMode: 'numeric' })),
+    h(S.FormField, { label: 'Phone number', error: 'Enter an 11-digit Nigerian number, like 0803 123 4567.' }, h(S.Input, { defaultValue: '0803 123 456', type: 'tel' }))));
+</script>
+</body>
+</html>

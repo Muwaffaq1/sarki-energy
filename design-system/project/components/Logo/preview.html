@@ -1,0 +1,16 @@
+<!-- @dsCard group="Atoms" height=120 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Logo</title></head>
+<body>
+<div id="root" class="se-row"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.Logo, { size: 64, label: 'Sarki Energy' }),
+    h('div', { style: { background: 'var(--surface-inverse)', padding: 'var(--space-16)', borderRadius: 'var(--radius-16)' } }, h(S.Logo, { size: 64, tone: 'inverse' })),
+    h('div', { style: { background: 'var(--neutral-600)', padding: 'var(--space-16)', borderRadius: 'var(--radius-16)' } }, h(S.Logo, { size: 64, tone: 'on-photo' })),
+    h(S.Logo, { size: 32 }), h(S.Logo, { size: 24 })));
+</script>
+</body>
+</html>

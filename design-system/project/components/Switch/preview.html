@@ -1,0 +1,15 @@
+<!-- @dsCard group="Atoms" height=120 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Switch</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.Switch, { label: 'Charge from solar only', defaultChecked: true }),
+    h(S.Switch, { label: 'Low battery alerts' }),
+    h(S.Switch, { label: 'Grid export (not available)', disabled: true })));
+</script>
+</body>
+</html>

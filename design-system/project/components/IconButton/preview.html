@@ -1,0 +1,17 @@
+<!-- @dsCard group="Atoms" height=88 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>IconButton</title></head>
+<body>
+<div id="root" class="se-row"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.IconButton, { icon: 'magnifying-glass', label: 'Search', variant: 'secondary' }),
+    h(S.IconButton, { icon: 'shopping-cart-simple', label: 'Cart', variant: 'ghost' }),
+    h(S.IconButton, { icon: 'plus', label: 'Add', variant: 'primary' }),
+    h(S.IconButton, { icon: 'arrow-right', label: 'Next', variant: 'accent', size: 'lg' }),
+    h(S.IconButton, { icon: 'x', label: 'Close', variant: 'ghost', size: 'sm' })));
+</script>
+</body>
+</html>

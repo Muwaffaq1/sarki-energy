@@ -1,0 +1,14 @@
+<!-- @dsCard group="Organisms" height=400 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>UsagePanel</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(S.UsagePanel, { title: 'Solar generated this week', total: '186.4', unit: 'kWh', series: 'solar',
+    data: [{ label: 'Mon', value: 24.1 }, { label: 'Tue', value: 28.6 }, { label: 'Wed', value: 19.2 }, { label: 'Thu', value: 30.4 }, { label: 'Fri', value: 27.9 }, { label: 'Sat', value: 26.3 }, { label: 'Sun', value: 29.9 }],
+    periods: ['Day', 'Week', 'Month', 'Year'], defaultPeriod: 'Week' }));
+</script>
+</body>
+</html>

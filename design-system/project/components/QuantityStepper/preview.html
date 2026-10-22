@@ -1,0 +1,14 @@
+<!-- @dsCard group="Molecules" height=88 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>QuantityStepper</title></head>
+<body>
+<div id="root" class="se-row"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.QuantityStepper, { defaultValue: 2, max: 10 }),
+    h(S.QuantityStepper, { defaultValue: 1, size: 'sm' })));
+</script>
+</body>
+</html>

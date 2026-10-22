@@ -1,0 +1,15 @@
+<!-- @dsCard group="Molecules" height=176 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>StatTile</title></head>
+<body>
+<div id="root" class="se-grid"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.StatTile, { icon: 'solar-panel', label: 'Solar generated', value: '1,284', unit: 'kWh', trend: 'up', delta: '12%', caption: 'vs last month' }),
+    h(S.StatTile, { icon: 'battery-charging', label: 'Battery', value: '86', unit: '%', caption: 'About 9 h of backup' }),
+    h(S.StatTile, { icon: 'gas-pump', label: 'Diesel used', value: '320', unit: 'L', trend: 'down', delta: '41%', upIsGood: false, caption: 'vs last month' })));
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.wrap { display: flex; flex-direction: column; gap: var(--space-16); max-width: 800px; }
+
+.box { display: flex; align-items: center; gap: var(--space-12); height: var(--control-lg); padding-inline: var(--space-16); border: var(--border-1) solid var(--line-strong); border-radius: var(--radius-full); background: var(--surface); color: var(--ink-muted); }
+.box:focus-within { outline: var(--border-2) solid var(--focus-ring); outline-offset: 2px; border-color: var(--ink); }
+.input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 16px; outline: none; }
+
+.count { color: var(--ink-muted); font-size: 14px; line-height: 20px; }
+
+.results { border-top: var(--border-1) solid var(--line); }
+.result { display: flex; flex-direction: column; gap: var(--space-4); padding-block: var(--space-16); border-bottom: var(--border-1) solid var(--line); }
+.text { color: var(--ink-muted); font-size: 14px; line-height: 20px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .result:hover :global(.heading-5) { text-decoration: underline; text-underline-offset: 4px; }
+}

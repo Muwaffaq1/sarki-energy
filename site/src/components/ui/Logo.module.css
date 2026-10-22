@@ -1,0 +1,7 @@
+.logo { flex: none; }
+.mark { fill: var(--logo-mark); }
+.letters { fill: var(--logo-on-mark); }
+.inverse .mark { fill: var(--logo-on-mark); }
+.inverse .letters { fill: var(--logo-mark); }
+.on-photo .mark { fill: var(--neutral-0); }
+.on-photo .letters { fill: var(--neutral-1000); }

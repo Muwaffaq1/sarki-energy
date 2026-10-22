@@ -1,0 +1,22 @@
+.button {
+  position: fixed;
+  right: var(--space-16);
+  bottom: calc(var(--space-16) + env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: var(--control-lg);
+  height: var(--control-lg);
+  border-radius: var(--radius-full);
+  background: var(--surface-inverse);
+  color: var(--ink-inverse);
+  box-shadow: var(--shadow-lg);
+  animation: settle var(--duration-480) var(--ease-out) 1.2s both;
+  transition: transform var(--duration-160) var(--ease-out);
+}
+
+.button:active { transform: scale(var(--motion-press-scale)); }
+
+@keyframes settle {
+  from { opacity: 0; transform: translateY(var(--motion-enter-offset)); }
+}

@@ -1,0 +1,42 @@
+.split { display: grid; gap: var(--space-32); }
+
+.head { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-12); }
+.title { text-wrap: balance; }
+.muted { color: var(--ink-muted); }
+
+.link { display: inline-flex; align-items: center; gap: var(--space-8); margin-top: var(--space-4); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.005em; }
+
+.list { border-top: var(--border-1) solid var(--line); }
+
+.item { border-bottom: var(--border-1) solid var(--line); }
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding-block: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  list-style: none;
+  cursor: pointer;
+}
+.question::-webkit-details-marker { display: none; }
+
+/* The plus turns into a close mark when open (Figma: plus rotated -45°). */
+.icon { flex: none; color: var(--ink-muted); transition: transform var(--duration-240) var(--ease-out); }
+.item[open] .icon { transform: rotate(45deg); }
+
+.answer { padding-bottom: 20px; color: var(--ink-muted); max-width: 640px; }
+
+@media (max-width: 767px) {
+  .title { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; }
+}
+
+/* Desktop: accordion left, header right, as in Figma. */
+@media (min-width: 1024px) {
+  .split { grid-template-columns: minmax(0, 1fr) 320px; gap: var(--space-96); align-items: start; }
+  .head { order: 2; }
+  .list { order: 1; }
+}

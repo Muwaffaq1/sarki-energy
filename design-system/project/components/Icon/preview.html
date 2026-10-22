@@ -1,0 +1,12 @@
+<!-- @dsCard group="Atoms" height=96 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Icon</title></head>
+<body>
+<div id="root" class="se-row"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(['lightning','solar-panel','sun','battery-charging','gas-pump','gas-can','charging-station','plug-charging','wind','drop-half','flame','leaf','factory','hard-hat','wrench','gauge','atom','chart-line-up'].map(function (n) { return h(S.Icon, { key: n, name: n, size: 24, label: n }); }));
+</script>
+</body>
+</html>

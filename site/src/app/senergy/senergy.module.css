@@ -1,0 +1,6 @@
+.split { display: grid; gap: var(--space-48); align-items: center; }
+.stage { display: grid; place-items: center; }
+
+@media (min-width: 1024px) {
+  .split { grid-template-columns: minmax(0, 1fr) 360px; }
+}

@@ -1,0 +1,20 @@
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-8); margin-bottom: var(--space-32); }
+
+.chip {
+  height: var(--control-sm);
+  padding-inline: var(--space-12);
+  border: var(--border-1) solid var(--line-strong);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--duration-120) var(--ease-hover), color var(--duration-120) var(--ease-hover);
+}
+.chip[aria-pressed="true"] { background: var(--surface-inverse); border-color: var(--surface-inverse); color: var(--ink-inverse); }
+
+@media (hover: hover) and (pointer: fine) {
+  .chip[aria-pressed="false"]:hover { border-color: var(--ink); background: var(--surface-subtle); }
+}

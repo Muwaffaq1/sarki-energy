@@ -1,0 +1,20 @@
+.layout { display: grid; gap: var(--space-32); align-items: start; }
+
+.toc { display: flex; flex-direction: column; gap: var(--space-12); font-size: 14px; line-height: 20px; }
+.toc ol, .toc ul { display: flex; flex-direction: column; gap: var(--space-8); }
+.toc a { color: var(--ink-muted); }
+
+.body { display: flex; flex-direction: column; gap: var(--space-32); max-width: 65ch; }
+.block { display: flex; flex-direction: column; gap: var(--space-12); scroll-margin-top: 96px; }
+.block p { color: var(--ink-muted); }
+
+.draft { padding: var(--space-12) var(--space-16); border-radius: var(--radius-8); background: var(--warning-soft); color: var(--warning); font-size: 14px; line-height: 20px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .toc a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+}
+
+@media (min-width: 1024px) {
+  .layout { grid-template-columns: 240px minmax(0, 1fr); gap: var(--space-64); }
+  .toc { position: sticky; top: 96px; }
+}

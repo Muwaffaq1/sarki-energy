@@ -1,0 +1,36 @@
+.list { border-bottom: var(--border-1) solid var(--line); }
+
+.row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: var(--space-16) var(--space-12);
+  padding-block: var(--space-24);
+  border-top: var(--border-1) solid var(--line);
+}
+
+.number { color: var(--accent-text); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.005em; padding-top: 6px; }
+
+.head { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-12); }
+
+.titleRow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8) var(--space-12); }
+
+.tags { grid-column: 2; display: flex; flex-wrap: wrap; gap: var(--space-8); }
+
+.tag {
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  background: var(--surface-subtle);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+}
+
+@media (max-width: 767px) {
+  .titleRow h3 { font-size: 20px; line-height: 28px; letter-spacing: -0.01em; }
+}
+
+/* Desktop: number · name (400px) · tags, as in Figma. */
+@media (min-width: 1024px) {
+  .row { grid-template-columns: 64px 400px minmax(0, 1fr); gap: var(--space-32); padding-block: var(--space-32); }
+  .tags { grid-column: auto; align-content: flex-start; }
+}

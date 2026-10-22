@@ -1,0 +1,29 @@
+.pill,
+.badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 6px;
+  height: 24px;
+  padding-inline: var(--space-8) 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.dot { width: 8px; height: 8px; border-radius: var(--radius-full); background: currentColor; flex: none; }
+
+.available { background: var(--accent-soft); color: var(--accent-text); }
+.available .dot { background: var(--accent); }
+
+.in-development { border: var(--border-1) solid var(--line-strong); color: var(--ink-muted); }
+.in-development .dot { background: transparent; box-shadow: inset 0 0 0 1.5px currentColor; }
+
+.inverse.in-development { border-color: var(--line-inverse); color: var(--ink-inverse-muted); }
+
+.badge { padding-inline: var(--space-8); gap: var(--space-4); }
+.delivered { background: var(--success-soft); color: var(--success); }
+.ongoing { background: var(--warning-soft); color: var(--warning); }

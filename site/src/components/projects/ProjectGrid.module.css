@@ -1,0 +1,31 @@
+.grid { display: grid; gap: var(--space-48); }
+
+.card { display: flex; flex-direction: column; gap: var(--space-16); }
+
+/* Placeholder until Sarki's photography lands. Same surface as the section, as in Figma. */
+.media {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  height: 180px;
+  padding: var(--space-16);
+  border-radius: var(--radius-16);
+  background: var(--surface-subtle);
+  color: var(--ink-muted);
+  text-align: center;
+}
+
+.media img { object-fit: cover; }
+
+.body { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-8); }
+.meta { display: flex; align-items: center; gap: var(--space-12); }
+.location { color: var(--ink-muted); font-size: 14px; line-height: 20px; letter-spacing: 0.005em; }
+.text { color: var(--ink-muted); }
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-24); }
+}

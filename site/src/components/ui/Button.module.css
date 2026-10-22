@@ -1,0 +1,37 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  border: var(--border-1) solid transparent;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-120) var(--ease-hover),
+    border-color var(--duration-120) var(--ease-hover),
+    color var(--duration-120) var(--ease-hover),
+    transform var(--duration-160) var(--ease-out);
+}
+
+.button:active { transform: scale(var(--motion-press-scale)); }
+
+.md { height: var(--control-md); padding-inline: var(--space-16); font-size: 14px; line-height: 20px; letter-spacing: 0.005em; }
+.lg { height: var(--control-lg); padding-inline: var(--space-24); font-size: 16px; line-height: 24px; }
+.block { width: 100%; }
+
+.accent { background: var(--accent); color: var(--on-accent); }
+.primary { background: var(--surface-inverse); color: var(--ink-inverse); }
+.secondary { color: var(--ink); border-color: var(--line-strong); }
+.on-inverse { color: var(--ink-inverse); border-color: var(--ink-inverse-muted); }
+/* Over photos the colours are fixed: the photo stays dark in both themes. */
+.on-photo { color: var(--neutral-0); border-color: rgb(255 255 255 / 0.55); }
+
+@media (hover: hover) and (pointer: fine) {
+  .accent:hover { background: var(--accent-hover); }
+  .primary:hover { background: var(--ink-muted); }
+  .secondary:hover { background: var(--surface-subtle); border-color: var(--ink); }
+  .on-inverse:hover { border-color: var(--ink-inverse); }
+  .on-photo:hover { border-color: var(--neutral-0); background: rgb(255 255 255 / 0.08); }
+}

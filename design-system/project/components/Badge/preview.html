@@ -1,0 +1,21 @@
+<!-- @dsCard group="Atoms" height=120 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Badge</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Badge, null, 'Solar'),
+      h(S.Badge, { tone: 'accent' }, 'New'),
+      h(S.Badge, { tone: 'inverse' }, 'Bestseller')),
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Badge, { tone: 'success', dot: true }, 'In stock'),
+      h(S.Badge, { tone: 'warning', dot: true }, 'Low battery'),
+      h(S.Badge, { tone: 'danger', dot: true }, 'Offline'),
+      h(S.Badge, { tone: 'info', icon: 'info' }, 'Installation included'))));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Atoms" height=200 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Button</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Button, { variant: 'accent', iconRight: 'arrow-right' }, 'Start a project'),
+      h(S.Button, { variant: 'primary' }, 'Explore solutions'),
+      h(S.Button, { variant: 'secondary' }, 'Download brochure'),
+      h(S.Button, { variant: 'ghost' }, 'Cancel'),
+      h(S.Button, { variant: 'danger' }, 'Remove')),
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Button, { variant: 'primary', size: 'sm', iconLeft: 'plus' }, 'Small'),
+      h(S.Button, { variant: 'primary', size: 'md' }, 'Medium'),
+      h(S.Button, { variant: 'primary', size: 'lg' }, 'Large'),
+      h(S.Button, { variant: 'primary', loading: true }, 'Saving'),
+      h(S.Button, { variant: 'primary', disabled: true }, 'Disabled'))));
+</script>
+</body>
+</html>

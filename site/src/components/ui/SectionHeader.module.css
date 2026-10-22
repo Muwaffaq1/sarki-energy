@@ -1,0 +1,27 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.text { display: flex; flex-direction: column; gap: var(--space-12); max-width: 720px; }
+.eyebrow { color: var(--ink-muted); }
+.title { color: var(--ink); text-wrap: balance; }
+.lead { color: var(--ink-muted); text-wrap: pretty; }
+
+.inverse .eyebrow, .inverse .lead { color: var(--ink-inverse-muted); }
+.inverse .title { color: var(--ink-inverse); }
+
+@media (max-width: 767px) {
+  .title { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; } /* heading-2 on phones */
+  .lead { font-size: 16px; line-height: 24px; }
+}
+
+@media (min-width: 768px) {
+  .head { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: var(--space-24); }
+}
+
+@media (min-width: 1280px) {
+  .head { margin-bottom: var(--space-48); }
+}

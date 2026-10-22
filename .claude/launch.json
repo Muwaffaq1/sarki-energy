@@ -1,0 +1,7 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "design-system", "url": "http://localhost:4173", "port": 4173 },
+    { "name": "site", "runtimeExecutable": "pnpm", "runtimeArgs": ["--dir", "site", "dev", "--port", "3100"], "port": 3100 }
+  ]
+}

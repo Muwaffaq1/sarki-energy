@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarki Energy — component playground</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="../project/components/bundle.css">
+<style>
+  body { padding: var(--space-32) var(--space-16); max-width: 1216px; margin: 0 auto; }
+  body > section { margin-bottom: var(--space-48); }
+  body > section > h2 { color: var(--ink-muted); margin: 0 0 var(--space-8); padding-left: var(--space-16); }
+  .bar { display: flex; gap: var(--space-8); padding: 0 var(--space-16) var(--space-32); }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="../project/components/bundle.js"></script>
+</head>
+<body>
+<div class="bar">
+  <button class="se-btn se-btn--secondary se-btn--sm" onclick="document.documentElement.dataset.theme='light'">Light</button>
+  <button class="se-btn se-btn--secondary se-btn--sm" onclick="document.documentElement.dataset.theme='dark'">Dark</button>
+</div>
+<section><h2 class="overline">Atoms · Badge</h2><div id="c-Badge" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Badge')).render(h(React.Fragment, null,
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Badge, null, 'Solar'),
+      h(S.Badge, { tone: 'accent' }, 'New'),
+      h(S.Badge, { tone: 'inverse' }, 'Bestseller')),
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Badge, { tone: 'success', dot: true }, 'In stock'),
+      h(S.Badge, { tone: 'warning', dot: true }, 'Low battery'),
+      h(S.Badge, { tone: 'danger', dot: true }, 'Offline'),
+      h(S.Badge, { tone: 'info', icon: 'info' }, 'Installation included'))));
+</script></section>
+<section><h2 class="overline">Atoms · Button</h2><div id="c-Button" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Button')).render(h(React.Fragment, null,
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Button, { variant: 'accent', iconRight: 'arrow-right' }, 'Start a project'),
+      h(S.Button, { variant: 'primary' }, 'Explore solutions'),
+      h(S.Button, { variant: 'secondary' }, 'Download brochure'),
+      h(S.Button, { variant: 'ghost' }, 'Cancel'),
+      h(S.Button, { variant: 'danger' }, 'Remove')),
+    h('div', { className: 'se-row', style: { padding: 0 } },
+      h(S.Button, { variant: 'primary', size: 'sm', iconLeft: 'plus' }, 'Small'),
+      h(S.Button, { variant: 'primary', size: 'md' }, 'Medium'),
+      h(S.Button, { variant: 'primary', size: 'lg' }, 'Large'),
+      h(S.Button, { variant: 'primary', loading: true }, 'Saving'),
+      h(S.Button, { variant: 'primary', disabled: true }, 'Disabled'))));
+</script></section>
+<section><h2 class="overline">Atoms · Checkbox</h2><div id="c-Checkbox" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Checkbox')).render(h(React.Fragment, null,
+    h(S.Checkbox, { label: 'Include installation', description: 'Certified engineers, within 7 working days', defaultChecked: true }),
+    h(S.Checkbox, { label: 'Add 2-year extended warranty' }),
+    h(S.Checkbox, { label: 'Unavailable in your state', disabled: true })));
+</script></section>
+<section><h2 class="overline">Atoms · Icon</h2><div id="c-Icon" class="se-row"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Icon')).render(['lightning','solar-panel','sun','battery-charging','gas-pump','gas-can','charging-station','plug-charging','wind','drop-half','flame','leaf','factory','hard-hat','wrench','gauge','atom','chart-line-up'].map(function (n) { return h(S.Icon, { key: n, name: n, size: 24, label: n }); }));
+</script></section>
+<section><h2 class="overline">Atoms · IconButton</h2><div id="c-IconButton" class="se-row"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-IconButton')).render(h(React.Fragment, null,
+    h(S.IconButton, { icon: 'magnifying-glass', label: 'Search', variant: 'secondary' }),
+    h(S.IconButton, { icon: 'shopping-cart-simple', label: 'Cart', variant: 'ghost' }),
+    h(S.IconButton, { icon: 'plus', label: 'Add', variant: 'primary' }),
+    h(S.IconButton, { icon: 'arrow-right', label: 'Next', variant: 'accent', size: 'lg' }),
+    h(S.IconButton, { icon: 'x', label: 'Close', variant: 'ghost', size: 'sm' })));
+</script></section>
+<section><h2 class="overline">Atoms · Input</h2><div id="c-Input" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Input')).render(h(React.Fragment, null,
+    h(S.Input, { placeholder: 'Search inverters, panels, meters', iconLeft: 'magnifying-glass' }),
+    h(S.Input, { defaultValue: '5', suffix: 'kVA', inputMode: 'decimal' }),
+    h(S.Input, { defaultValue: '0803 123 456', invalid: true })));
+</script></section>
+<section><h2 class="overline">Atoms · Logo</h2><div id="c-Logo" class="se-row"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Logo')).render(h(React.Fragment, null,
+    h(S.Logo, { size: 64, label: 'Sarki Energy' }),
+    h('div', { style: { background: 'var(--surface-inverse)', padding: 'var(--space-16)', borderRadius: 'var(--radius-16)' } }, h(S.Logo, { size: 64, tone: 'inverse' })),
+    h('div', { style: { background: 'var(--neutral-600)', padding: 'var(--space-16)', borderRadius: 'var(--radius-16)' } }, h(S.Logo, { size: 64, tone: 'on-photo' })),
+    h(S.Logo, { size: 32 }), h(S.Logo, { size: 24 })));
+</script></section>
+<section><h2 class="overline">Atoms · Price</h2><div id="c-Price" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Price')).render(h(React.Fragment, null,
+    h(S.Price, { amount: 950000, size: 'lg' }),
+    h(S.Price, { amount: 550000, compareAt: 620000 }),
+    h(S.Price, { amount: 897, unit: 'L', size: 'sm' })));
+</script></section>
+<section><h2 class="overline">Atoms · Switch</h2><div id="c-Switch" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-Switch')).render(h(React.Fragment, null,
+    h(S.Switch, { label: 'Charge from solar only', defaultChecked: true }),
+    h(S.Switch, { label: 'Low battery alerts' }),
+    h(S.Switch, { label: 'Grid export (not available)', disabled: true })));
+</script></section>
+<section><h2 class="overline">Molecules · FormField</h2><div id="c-FormField" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-FormField')).render(h(React.Fragment, null,
+    h(S.FormField, { label: 'Company name', required: true }, h(S.Input, { defaultValue: 'Kano Agro Mills Ltd' })),
+    h(S.FormField, { label: 'Average monthly diesel spend', hint: 'A rough figure is fine. We use it to size your solar system.' }, h(S.Input, { placeholder: '450,000', suffix: '\u20A6 / month', inputMode: 'numeric' })),
+    h(S.FormField, { label: 'Phone number', error: 'Enter an 11-digit Nigerian number, like 0803 123 4567.' }, h(S.Input, { defaultValue: '0803 123 456', type: 'tel' }))));
+</script></section>
+<section><h2 class="overline">Molecules · QuantityStepper</h2><div id="c-QuantityStepper" class="se-row"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-QuantityStepper')).render(h(React.Fragment, null,
+    h(S.QuantityStepper, { defaultValue: 2, max: 10 }),
+    h(S.QuantityStepper, { defaultValue: 1, size: 'sm' })));
+</script></section>
+<section><h2 class="overline">Molecules · SegmentedControl</h2><div id="c-SegmentedControl" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-SegmentedControl')).render(h(React.Fragment, null,
+    h(S.SegmentedControl, { options: ['Day', 'Week', 'Month', 'Year'], defaultValue: 'Week', label: 'Period' }),
+    h(S.SegmentedControl, { options: [{ value: 'kwh', label: 'kWh' }, { value: 'ngn', label: '\u20A6' }], label: 'Units' })));
+</script></section>
+<section><h2 class="overline">Molecules · StatTile</h2><div id="c-StatTile" class="se-grid"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-StatTile')).render(h(React.Fragment, null,
+    h(S.StatTile, { icon: 'solar-panel', label: 'Solar generated', value: '1,284', unit: 'kWh', trend: 'up', delta: '12%', caption: 'vs last month' }),
+    h(S.StatTile, { icon: 'battery-charging', label: 'Battery', value: '86', unit: '%', caption: 'About 9 h of backup' }),
+    h(S.StatTile, { icon: 'gas-pump', label: 'Diesel used', value: '320', unit: 'L', trend: 'down', delta: '41%', upIsGood: false, caption: 'vs last month' })));
+</script></section>
+<section><h2 class="overline">Organisms · OrderSummary</h2><div id="c-OrderSummary" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-OrderSummary')).render(h('div', { style: { maxWidth: 400 } }, h(S.OrderSummary, {
+    items: [
+      { name: 'Smart Inverter Module 5 kVA', qty: 1, amount: 550000 },
+      { name: 'Compact Lithium Cell 5 kWh', qty: 2, amount: 899000 },
+      { name: 'Installation, Abuja', qty: 1, amount: 150000 }],
+    delivery: 25000, discount: 50000, ctaLabel: 'Continue to payment' })));
+</script></section>
+<section><h2 class="overline">Organisms · ProductCard</h2><div id="c-ProductCard" class="se-grid"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-ProductCard')).render(h(React.Fragment, null,
+    h(S.ProductCard, { icon: 'lightning', category: 'Inverters', name: 'Smart Inverter Module 5 kVA', spec: 'Pure sine wave, 48 V, Wi-Fi monitoring', price: 550000, compareAt: 620000, badge: { label: 'Save 11%' }, stock: 'in' }),
+    h(S.ProductCard, { icon: 'battery-charging', category: 'Storage', name: 'Compact Lithium Cell 5 kWh', spec: 'LiFePO4, 6,000 cycles', price: 899000, stock: 'low' }),
+    h(S.ProductCard, { icon: 'gauge', category: 'Metering', name: 'Digital Flow Meter', spec: 'Diesel and petrol, \u00B10.5%', price: 380000, stock: 'out' })));
+</script></section>
+<section><h2 class="overline">Organisms · ServiceCard</h2><div id="c-ServiceCard" class="se-grid"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-ServiceCard')).render(h(React.Fragment, null,
+    h(S.ServiceCard, { icon: 'solar-panel', title: 'Renewable Energy & Power', description: 'Solar PV systems, battery energy storage and clean power for homes and industry.', href: '#' }),
+    h(S.ServiceCard, { icon: 'gas-pump', title: 'Oil & Gas', description: 'Supply and trading, fuel station services, CNG and LPG stations.', href: '#' }),
+    h(S.ServiceCard, { icon: 'hard-hat', title: 'Engineering', description: 'End-to-end EPC services delivering quality, safe and efficient projects.', href: '#' })));
+</script></section>
+<section><h2 class="overline">Organisms · SiteHeader</h2><div id="c-SiteHeader"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-SiteHeader')).render(h(S.SiteHeader, { cartCount: 2,
+    links: [{ label: 'Our business', current: true }, { label: 'Solutions' }, { label: 'Shop' }, { label: 'Projects' }, { label: 'About' }] }));
+</script></section>
+<section><h2 class="overline">Organisms · StationCard</h2><div id="c-StationCard" class="se-grid se-grid--wide"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-StationCard')).render(h(React.Fragment, null,
+    h(S.StationCard, { kind: 'fuel', name: 'Sarki Station, Wuse II', distance: '2.4 km', address: 'Aminu Kano Cres', status: 'open',
+      products: [{ label: 'PMS (petrol)', price: 897 }, { label: 'AGO (diesel)', price: 1180 }, { label: 'LPG', price: 1150, unit: 'kg' }] }),
+    h(S.StationCard, { kind: 'ev', name: 'Sarki EV Hub, Lekki', distance: '6.1 km', address: 'Admiralty Way', status: 'busy',
+      chargers: { available: 1, total: 4, power: '60 kW', price: 250 } })));
+</script></section>
+<section><h2 class="overline">Organisms · UsagePanel</h2><div id="c-UsagePanel" class="se-stack"></div><script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('c-UsagePanel')).render(h(S.UsagePanel, { title: 'Solar generated this week', total: '186.4', unit: 'kWh', series: 'solar',
+    data: [{ label: 'Mon', value: 24.1 }, { label: 'Tue', value: 28.6 }, { label: 'Wed', value: 19.2 }, { label: 'Thu', value: 30.4 }, { label: 'Fri', value: 27.9 }, { label: 'Sat', value: 26.3 }, { label: 'Sun', value: 29.9 }],
+    periods: ['Day', 'Week', 'Month', 'Year'], defaultPeriod: 'Week' }));
+</script></section>
+</body>
+</html>

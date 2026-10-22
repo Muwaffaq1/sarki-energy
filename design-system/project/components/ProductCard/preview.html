@@ -1,0 +1,15 @@
+<!-- @dsCard group="Organisms" height=440 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>ProductCard</title></head>
+<body>
+<div id="root" class="se-grid"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.ProductCard, { icon: 'lightning', category: 'Inverters', name: 'Smart Inverter Module 5 kVA', spec: 'Pure sine wave, 48 V, Wi-Fi monitoring', price: 550000, compareAt: 620000, badge: { label: 'Save 11%' }, stock: 'in' }),
+    h(S.ProductCard, { icon: 'battery-charging', category: 'Storage', name: 'Compact Lithium Cell 5 kWh', spec: 'LiFePO4, 6,000 cycles', price: 899000, stock: 'low' }),
+    h(S.ProductCard, { icon: 'gauge', category: 'Metering', name: 'Digital Flow Meter', spec: 'Diesel and petrol, \u00B10.5%', price: 380000, stock: 'out' })));
+</script>
+</body>
+</html>

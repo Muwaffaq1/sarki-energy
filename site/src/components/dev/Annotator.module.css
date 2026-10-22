@@ -1,0 +1,119 @@
+/* Dev tooling, not site UI: fixed colours (same in both themes) and an off-brand orange. */
+.root {
+  --annotate: #e8590c;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  color: #16231d;
+}
+
+.outline {
+  position: fixed;
+  z-index: 9998;
+  border-radius: 2px;
+  outline: 2px solid var(--annotate);
+  background: rgb(232 89 12 / 0.08);
+  pointer-events: none;
+}
+
+.pinWrap { position: fixed; z-index: 9999; }
+
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  border-radius: 9999px;
+  background: var(--annotate);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.25);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.popover,
+.draft {
+  border: 1px solid rgb(0 0 0 / 0.1);
+  border-radius: 6px;
+  background: #fff;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.18);
+}
+
+.popover { position: absolute; left: 16px; top: 8px; width: 256px; }
+.draft { position: fixed; z-index: 10000; width: 288px; }
+
+.noteText { white-space: pre-wrap; }
+
+.meta { margin-top: 8px; overflow: hidden; color: #66726b; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.draft .meta { margin-top: 0; }
+
+.delete {
+  margin-top: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #a33936;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid #8b918a;
+  border-radius: 4px;
+  font: inherit;
+  color: inherit;
+  background: #fff;
+  resize: none;
+  outline: none;
+}
+.textarea:focus { border-color: var(--annotate); }
+
+.draftFooter { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.hint { color: #66726b; font-size: 12px; }
+.draftActions { display: flex; gap: 8px; }
+
+.cancel,
+.save {
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.cancel { background: none; color: #4a5750; }
+.save { padding-inline: 12px; background: var(--annotate); color: #fff; font-weight: 500; }
+.save:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.toggle {
+  position: fixed;
+  right: 16px;
+  bottom: 80px;
+  z-index: 10000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 9999px;
+  background: #fff;
+  color: #16231d;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.2);
+  cursor: pointer;
+}
+.toggle[data-active="true"] { background: var(--annotate); color: #fff; }
+
+.toggleDot { width: 8px; height: 8px; border-radius: 9999px; background: var(--annotate); }
+.toggle[data-active="true"] .toggleDot { background: #fff; }

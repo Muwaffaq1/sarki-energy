@@ -1,0 +1,15 @@
+<!-- @dsCard group="Atoms" height=168 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Input</title></head>
+<body>
+<div id="root" class="se-stack"></div>
+<script>
+  var S = window.Sarki, h = React.createElement;
+  ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+    h(S.Input, { placeholder: 'Search inverters, panels, meters', iconLeft: 'magnifying-glass' }),
+    h(S.Input, { defaultValue: '5', suffix: 'kVA', inputMode: 'decimal' }),
+    h(S.Input, { defaultValue: '0803 123 456', invalid: true })));
+</script>
+</body>
+</html>

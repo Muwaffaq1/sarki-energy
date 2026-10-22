@@ -1,0 +1,390 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-15T16:06:49Z"
+  },
+  "title": "Sarki Energy",
+  "namespace": "Sarki",
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "sarki-mark.svg",
+        "sarki-mark-inverse.svg",
+        "favicon.svg",
+        "sarki-mark-512.png",
+        "apple-touch-icon-180.png",
+        "favicon-32.png"
+      ],
+      "files": {
+        "sarki-mark.svg": {
+          "name": "sarki-mark.svg",
+          "blob": "a69fc8e93f013c252c8e4b1186f42759",
+          "size": 3254,
+          "type": "image/svg+xml"
+        },
+        "sarki-mark-inverse.svg": {
+          "name": "sarki-mark-inverse.svg",
+          "blob": "a7a8aed4018acd6c1e8fb657c682f340",
+          "size": 3253,
+          "type": "image/svg+xml"
+        },
+        "favicon.svg": {
+          "name": "favicon.svg",
+          "blob": "6fad87c915cae77ef39d95ee2adf36ad",
+          "size": 3183,
+          "type": "image/svg+xml"
+        },
+        "sarki-mark-512.png": {
+          "name": "sarki-mark-512.png",
+          "blob": "83f04128134a67b94f1b2ee578dfdf36",
+          "size": 28261,
+          "type": "image/png"
+        },
+        "apple-touch-icon-180.png": {
+          "name": "apple-touch-icon-180.png",
+          "blob": "bc1606d8b206f7f50a47e2c207340749",
+          "size": 8201,
+          "type": "image/png"
+        },
+        "favicon-32.png": {
+          "name": "favicon-32.png",
+          "blob": "5e84a202bbf21e27131a920f14dd536f",
+          "size": 1625,
+          "type": "image/png"
+        }
+      }
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "xs",
+      "order": [
+        "lightning.svg",
+        "solar-panel.svg",
+        "sun.svg",
+        "battery-charging.svg",
+        "charging-station.svg",
+        "plug-charging.svg",
+        "gas-pump.svg",
+        "gas-can.svg",
+        "flame.svg",
+        "wind.svg",
+        "drop-half.svg",
+        "leaf.svg",
+        "factory.svg",
+        "hard-hat.svg",
+        "wrench.svg",
+        "gauge.svg",
+        "atom.svg",
+        "chart-line-up.svg",
+        "arrow-right.svg",
+        "arrow-up-right.svg",
+        "caret-down.svg",
+        "check-circle.svg",
+        "check.svg",
+        "envelope-simple.svg",
+        "heart.svg",
+        "info.svg",
+        "list.svg",
+        "magnifying-glass.svg",
+        "map-pin.svg",
+        "minus.svg",
+        "phone.svg",
+        "plus.svg",
+        "shield-check.svg",
+        "shopping-cart-simple.svg",
+        "star.svg",
+        "trend-down.svg",
+        "trend-up.svg",
+        "truck.svg",
+        "user.svg",
+        "warning.svg",
+        "x-circle.svg",
+        "x.svg"
+      ],
+      "files": {
+        "arrow-right.svg": {
+          "name": "arrow-right.svg",
+          "blob": "782b490e11c7d1feb087d97829a43c18",
+          "size": 245,
+          "type": "image/svg+xml"
+        },
+        "arrow-up-right.svg": {
+          "name": "arrow-up-right.svg",
+          "blob": "d64b63c824bd771b35d16fdb7d15f7da",
+          "size": 217,
+          "type": "image/svg+xml"
+        },
+        "atom.svg": {
+          "name": "atom.svg",
+          "blob": "8d3575f5582e2ae3af16a543b2f6c822",
+          "size": 1296,
+          "type": "image/svg+xml"
+        },
+        "battery-charging.svg": {
+          "name": "battery-charging.svg",
+          "blob": "29b79898bd2bc5637f42d7f1a5dcda26",
+          "size": 473,
+          "type": "image/svg+xml"
+        },
+        "caret-down.svg": {
+          "name": "caret-down.svg",
+          "blob": "403e1c333fe5684a42431e516ad3b828",
+          "size": 214,
+          "type": "image/svg+xml"
+        },
+        "charging-station.svg": {
+          "name": "charging-station.svg",
+          "blob": "aaa5f13784c4a73f371de00ec97c65d9",
+          "size": 582,
+          "type": "image/svg+xml"
+        },
+        "chart-line-up.svg": {
+          "name": "chart-line-up.svg",
+          "blob": "1888d8b5cea5bd84d91b2030d4760080",
+          "size": 350,
+          "type": "image/svg+xml"
+        },
+        "check-circle.svg": {
+          "name": "check-circle.svg",
+          "blob": "a9d515d8761cd303ec3400f7271b70ce",
+          "size": 339,
+          "type": "image/svg+xml"
+        },
+        "check.svg": {
+          "name": "check.svg",
+          "blob": "c8249c866193267988f4b5b4f054f8e7",
+          "size": 215,
+          "type": "image/svg+xml"
+        },
+        "drop-half.svg": {
+          "name": "drop-half.svg",
+          "blob": "e4ef571aa391d515105c40197512d7b9",
+          "size": 620,
+          "type": "image/svg+xml"
+        },
+        "envelope-simple.svg": {
+          "name": "envelope-simple.svg",
+          "blob": "d412d56132afd9a1ff18c6ca22975348",
+          "size": 282,
+          "type": "image/svg+xml"
+        },
+        "factory.svg": {
+          "name": "factory.svg",
+          "blob": "24671d55c9e60d44dbe2b920702ea6c8",
+          "size": 568,
+          "type": "image/svg+xml"
+        },
+        "flame.svg": {
+          "name": "flame.svg",
+          "blob": "2c036a80b18d43c4fdc0f4d25644d41e",
+          "size": 672,
+          "type": "image/svg+xml"
+        },
+        "gas-can.svg": {
+          "name": "gas-can.svg",
+          "blob": "b5a6396e1cf994d8d797df29c8fb4f3b",
+          "size": 626,
+          "type": "image/svg+xml"
+        },
+        "gas-pump.svg": {
+          "name": "gas-pump.svg",
+          "blob": "728bc40680b1d386da313c61bac096ef",
+          "size": 489,
+          "type": "image/svg+xml"
+        },
+        "gauge.svg": {
+          "name": "gauge.svg",
+          "blob": "741ecd9129e846cc0519d4ab469183f8",
+          "size": 499,
+          "type": "image/svg+xml"
+        },
+        "hard-hat.svg": {
+          "name": "hard-hat.svg",
+          "blob": "e121863549f05e249a464a93557ac5a3",
+          "size": 431,
+          "type": "image/svg+xml"
+        },
+        "heart.svg": {
+          "name": "heart.svg",
+          "blob": "9d001a09fd2c38c34835a499094cd8bc",
+          "size": 489,
+          "type": "image/svg+xml"
+        },
+        "info.svg": {
+          "name": "info.svg",
+          "blob": "1b0a95438337a13e562386e48bda06b4",
+          "size": 348,
+          "type": "image/svg+xml"
+        },
+        "leaf.svg": {
+          "name": "leaf.svg",
+          "blob": "63df43e82619b1ac23a06cb489a73857",
+          "size": 574,
+          "type": "image/svg+xml"
+        },
+        "lightning.svg": {
+          "name": "lightning.svg",
+          "blob": "b5d83fb6e87e97e6d1b68991d65ab342",
+          "size": 376,
+          "type": "image/svg+xml"
+        },
+        "list.svg": {
+          "name": "list.svg",
+          "blob": "cd8e1d79b51f38cef8e20ce7147dfd73",
+          "size": 253,
+          "type": "image/svg+xml"
+        },
+        "magnifying-glass.svg": {
+          "name": "magnifying-glass.svg",
+          "blob": "36aabbe1cf74aa934c8477c9717f1084",
+          "size": 243,
+          "type": "image/svg+xml"
+        },
+        "map-pin.svg": {
+          "name": "map-pin.svg",
+          "blob": "d9024210e979b0d7ae5b997af28a6cc1",
+          "size": 459,
+          "type": "image/svg+xml"
+        },
+        "minus.svg": {
+          "name": "minus.svg",
+          "blob": "b44a250a1a96f0abc44cf028010d495a",
+          "size": 163,
+          "type": "image/svg+xml"
+        },
+        "phone.svg": {
+          "name": "phone.svg",
+          "blob": "dffe1f5bd9774d362cb4eaa01e571688",
+          "size": 709,
+          "type": "image/svg+xml"
+        },
+        "plug-charging.svg": {
+          "name": "plug-charging.svg",
+          "blob": "9017e8b6ce26e56c5b624fe8b70d86cb",
+          "size": 504,
+          "type": "image/svg+xml"
+        },
+        "plus.svg": {
+          "name": "plus.svg",
+          "blob": "2bf6905e88a88ff2aaaf7e41190d54c1",
+          "size": 212,
+          "type": "image/svg+xml"
+        },
+        "shield-check.svg": {
+          "name": "shield-check.svg",
+          "blob": "7593c3f747a8f181c86b0bcc91909e74",
+          "size": 536,
+          "type": "image/svg+xml"
+        },
+        "shopping-cart-simple.svg": {
+          "name": "shopping-cart-simple.svg",
+          "blob": "331de9f5911e9a9d73594010194ee339",
+          "size": 436,
+          "type": "image/svg+xml"
+        },
+        "solar-panel.svg": {
+          "name": "solar-panel.svg",
+          "blob": "3c2af8bcf2fbe35ecdc32108c750c024",
+          "size": 866,
+          "type": "image/svg+xml"
+        },
+        "star.svg": {
+          "name": "star.svg",
+          "blob": "e385eb0aaeb70a09eaabbeece7be7a54",
+          "size": 810,
+          "type": "image/svg+xml"
+        },
+        "sun.svg": {
+          "name": "sun.svg",
+          "blob": "cc3f84cdb09bd3d7a5178930bea378c6",
+          "size": 685,
+          "type": "image/svg+xml"
+        },
+        "trend-down.svg": {
+          "name": "trend-down.svg",
+          "blob": "ccfa823094cca1455e015f8e1523a0fa",
+          "size": 292,
+          "type": "image/svg+xml"
+        },
+        "trend-up.svg": {
+          "name": "trend-up.svg",
+          "blob": "e2bc91030f8de4b42618e5a304f014c3",
+          "size": 292,
+          "type": "image/svg+xml"
+        },
+        "truck.svg": {
+          "name": "truck.svg",
+          "blob": "e0d6ba23573eaab5b710147ac2f7e039",
+          "size": 548,
+          "type": "image/svg+xml"
+        },
+        "user.svg": {
+          "name": "user.svg",
+          "blob": "fce2e6bcd6b403e79602d13b0400e7c0",
+          "size": 340,
+          "type": "image/svg+xml"
+        },
+        "warning.svg": {
+          "name": "warning.svg",
+          "blob": "a2c92814429aa8dee31d7cfff3f23afb",
+          "size": 543,
+          "type": "image/svg+xml"
+        },
+        "wind.svg": {
+          "name": "wind.svg",
+          "blob": "84a98ed6e66669caa4e4f76260b86a82",
+          "size": 537,
+          "type": "image/svg+xml"
+        },
+        "wrench.svg": {
+          "name": "wrench.svg",
+          "blob": "178000ae0762befa4c1e5e8d27137e27",
+          "size": 653,
+          "type": "image/svg+xml"
+        },
+        "x-circle.svg": {
+          "name": "x-circle.svg",
+          "blob": "a56ce440d145d9f61c7becfd4076d90c",
+          "size": 404,
+          "type": "image/svg+xml"
+        },
+        "x.svg": {
+          "name": "x.svg",
+          "blob": "946a363216f53fa4a0832140e91c7f93",
+          "size": 284,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Muwaffaq Yusuf",
+    "via": "Claude Code",
+    "at": "2026-10-21T22:55:00Z",
+    "note": "Vector logo: SVG masters, favicons, logo-mark tokens and a Logo component. Volt accent, motion tokens and 25 new components."
+  }
+}

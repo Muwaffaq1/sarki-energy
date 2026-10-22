@@ -1,0 +1,50 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sarki Energy</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--surface); color: var(--ink); font-family: var(--font-sans); overflow: hidden; }
+  .cover { position: relative; height: 288px; overflow: hidden; }
+  .art { position: absolute; top: 0; left: 480px; width: 480px; height: 288px; overflow: hidden; }
+  .art svg { display: block; width: 480px; height: 288px; }
+  .disc { fill: var(--surface-inverse); }
+  .volt { fill: var(--accent); }
+  .tint { fill: var(--volt-200); }
+  .blk { rx: var(--radius-16); }
+  .dot { fill: var(--accent); }
+  .words { position: absolute; left: var(--space-32); bottom: var(--space-32); max-width: 440px; }
+  .name { margin: 0; font-size: 104px; line-height: .92; font-weight: 600; letter-spacing: -0.04em; color: var(--ink); }
+  .tag { margin: var(--space-12) 0 0 4px; font-size: 14px; line-height: 20px; color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      surface-inverse disc r=192 (the logo's black disc, largest, bleeding off top and right) · accent (Volt) 128×128 · volt-200 tint 128×96 · ≈40% of 960×288
+  arrangement one oversized disc bleeding off the edge, the way the "se" bleeds out of the mark, with two satellite blocks stacked on the left
+  pattern     dot grid, from "a 4px grid, precise and engineered": 4×4 Volt dots r=4 at a space-16 pitch, cut into the disc like a meter face
+  scales      sides space-128 / space-96; gutters space-16 and space-24; pitch space-16; corners radius-16; dots radius-full
+-->
+<circle class="disc" cx="384" cy="112" r="192"/>
+<rect class="tint blk" x="24" y="24" width="128" height="96" rx="16"/>
+<rect class="volt blk" x="24" y="136" width="128" height="128" rx="16"/>
+<g>
+  <circle class="dot" cx="264" cy="168" r="4"/><circle class="dot" cx="280" cy="168" r="4"/><circle class="dot" cx="296" cy="168" r="4"/><circle class="dot" cx="312" cy="168" r="4"/>
+  <circle class="dot" cx="264" cy="184" r="4"/><circle class="dot" cx="280" cy="184" r="4"/><circle class="dot" cx="296" cy="184" r="4"/><circle class="dot" cx="312" cy="184" r="4"/>
+  <circle class="dot" cx="264" cy="200" r="4"/><circle class="dot" cx="280" cy="200" r="4"/><circle class="dot" cx="296" cy="200" r="4"/><circle class="dot" cx="312" cy="200" r="4"/>
+  <circle class="dot" cx="264" cy="216" r="4"/><circle class="dot" cx="280" cy="216" r="4"/><circle class="dot" cx="296" cy="216" r="4"/><circle class="dot" cx="312" cy="216" r="4"/>
+</g>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Sarki Energy</h1>
+<p class="tag">Advancing your progress.</p>
+</div>
+</div>
+</body>
+</html>
